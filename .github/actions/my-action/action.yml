@@ -1,4 +1,4 @@
-name: "My-action"
+name: "My action"
 description: "Test my actions"
 runs:
 #Nos permite agrupar pasos comunes a reutilizar
