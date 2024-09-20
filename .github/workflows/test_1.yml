@@ -1,11 +1,16 @@
+#Nombre general de yml
 name: Hola Mundo
 
+#Indica que el evento push dispara los jobs
 on: [push]
 
 jobs:
+  #Nombre del job es holita
   holita:
+    #Indica el entorno donde se ejecutará
     runs-on: ubuntu-latest
 
+    #Define los pasos que tendrá el Job, en este casi son 3 pasos 
     steps:
     - name: Hola mundo
       run: echo "Hola Mundillo"
@@ -18,9 +23,10 @@ jobs:
 
     - name: Read file
       run: cat hola.txt
-
+  #Se define otro  job
   otherjob:
     runs-on: ubuntu-latest
+    #Indica que se hará despues que se termine el anterior Job
     needs: [holita]
 
     steps:
