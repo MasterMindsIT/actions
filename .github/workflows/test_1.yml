@@ -28,7 +28,7 @@ jobs:
           #Damos permisos de ejecucion
           chmod +x script.sh
           #Ejecutamos en cript
-          ./cript.sh
+          ./script.sh
 
     #Define los pasos que tendrá el Job, en este casi son 3 pasos 
     #steps:
