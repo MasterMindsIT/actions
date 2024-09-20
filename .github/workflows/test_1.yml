@@ -24,11 +24,19 @@ jobs:
         uses: actions/checkout@v2
 
       - name: ls
-        run: |
+        run: ls -al
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.4
+
+      - name: node version
+        run: node --version
+            
+        #run: |
           #Damos permisos de ejecucion
-          chmod +x script.sh
+          #chmod +x script.sh
           #Ejecutamos en cript
-          ./script.sh
+          #./script.sh
 
     #Define los pasos que tendrá el Job, en este casi son 3 pasos 
     #steps:
