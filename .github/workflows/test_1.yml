@@ -19,22 +19,25 @@ jobs:
     #Indica el entorno donde se ejecutará
     runs-on: ubuntu-latest
 
-    services:
-      mysql: 
-        image: mysql:5.7
-        env:
-          MYSQL_ROOT_PASSWORD: admin
-        ports:
-          - 3306:3306
+    #services:
+      #mysql: 
+        #image: mysql:5.7
+        #env:
+          #MYSQL_ROOT_PASSWORD: admin
+        #ports:
+          #- 3306:3306
 
-      redis:
-        image: redis
-        ports:
-          - 6379:6379
+      #redis:
+        #image: redis
+        #ports:
+          #- 6379:6379
+
+    env:
+      MY_VAR: Esto vale my_var
 
     steps:
       - name: Test
-        run: ls
+        run: echo "MY_VAR vale: $MY_VAR"
       
       
       
