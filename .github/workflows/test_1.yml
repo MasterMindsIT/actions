@@ -2,8 +2,16 @@
 name: Hola Mundo
 
 #Indica que el evento push dispara los jobs
-on: [push, pull_request]
+#on: [push, pull_request]
 
+#Se indica que ejecutaremos bajo eventos discriminados por rama o criterios elegibles push este caso
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - main
 jobs:
   #Nombre del job es holita
   holita:
@@ -30,5 +38,8 @@ jobs:
     needs: [holita]
 
     steps:
+    #Sacado de github actions marketplace para obtener el workspace
+    - name: Checkout
+      uses: actions/checkout@v4.1.7       
     - name: LS
       run: ls -al
