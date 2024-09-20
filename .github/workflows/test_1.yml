@@ -32,8 +32,8 @@ jobs:
         #ports:
           #- 6379:6379
 
-    env:
-      MY_VAR: Esto vale my_var
+    #env:
+      #MY_VAR: Esto vale my_var
 
     steps:
       - name: Test
@@ -41,8 +41,8 @@ jobs:
           MY_VAR1: Esto vale my_var1
         run: echo "MY_VAR vale $MY_VAR1"
       
-      - name: VarOnGithub
-         run: echo "La variable declarada en github vars actiosn es ${{vars.MY_SECRET_TEST_VAR}}"
+      - name: Test1
+        run: echo "La variable declarada en github vars actiosn es ${{vars.MY_SECRET_TEST_VAR}}"
 
       
       #- name: Checkout code
