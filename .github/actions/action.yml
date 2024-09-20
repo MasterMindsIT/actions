@@ -7,3 +7,5 @@ runs:
   steps:
     - name: Hi world
       run: echo "Hola mundo"
+      #shell es una directiva para que sea exportable y ejecutable
+      shell: bash
