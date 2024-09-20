@@ -21,10 +21,14 @@ jobs:
     #Define los pasos que tendrá el Job, en este casi son 3 pasos 
     steps:
     - name: Hola mundo
+    #Ejecutamos comandos dentro del linux
       run: echo "Hola Mundillo"
 
     - name: touch file
-      run: touch hola.txt
+    #Utilizando el pipe podemos dejar varias líneas para ejecutarse
+      run: |
+        echo "Hi World"  >> filehola.txt
+        cat filehola.txt
 
     - name: Set text
       run: echo "Hola mundo" >> hola.txt
