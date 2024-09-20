@@ -1,7 +1,8 @@
 name: "My action"
 description: "Test my actions"
-
+#Directiva para recibir variables
 inputs:
+  #Message aqui es un nombre de variable
   message:
     description: "My message fron origin"
     required: true
