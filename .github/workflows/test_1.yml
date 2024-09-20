@@ -44,9 +44,6 @@ jobs:
       - name: Test1
         run: echo "La variable declarada en github vars actiosn es ${{ vars.MY_SECRET_TEST_VAR }}"
 
-      - name: Test2
-        run: ls
-
       
       #- name: Checkout code
         #uses: actions/checkout@v3
