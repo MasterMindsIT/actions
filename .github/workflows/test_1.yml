@@ -2,7 +2,7 @@
 name: Hola Mundo
 
 #Indica que el evento push dispara los jobs
-on: [push]
+on: [push, pull_request]
 
 jobs:
   #Nombre del job es holita
