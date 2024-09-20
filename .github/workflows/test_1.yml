@@ -10,25 +10,37 @@ jobs:
     #Indica el entorno donde se ejecutará
     runs-on: ubuntu-latest
 
+    steps:
+      #Primero nos ubicamos en nuestro workspace
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: ls
+        run: |
+          #Damos permisos de ejecucion
+          chmod +x script.sh
+          #Ejecutamos en cript
+          ./cript.sh
+
     #Define los pasos que tendrá el Job, en este casi son 3 pasos 
-    steps:
-    - name: Hola mundo
-      run: echo "Hola Mundillo"
+    #steps:
+    #- name: Hola mundo
+     # run: echo "Hola Mundillo"
 
-    - name: touch file
-      run: touch hola.txt
+    #- name: touch file
+     # run: touch hola.txt
 
-    - name: Set text
-      run: echo "Hola mundo" >> hola.txt
+    #- name: Set text
+     # run: echo "Hola mundo" >> hola.txt
 
-    - name: Read file
-      run: cat hola.txt
+    #- name: Read file
+     # run: cat hola.txt
   #Se define otro  job
-  otherjob:
-    runs-on: ubuntu-latest
+ # otherjob:
+  #  runs-on: ubuntu-latest
     #Indica que se hará despues que se termine el anterior Job
-    needs: [holita]
+   # needs: [holita]
 
-    steps:
-    - name: LS
-      run: ls -al
+    #steps:
+    #- name: LS
+     # run: ls -al
