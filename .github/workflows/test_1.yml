@@ -21,10 +21,10 @@ jobs:
 
     steps:
       #Primero nos ubicamos en nuestro workspace
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      -name: ls action
+      -name: ls
         uses: ./.github/actions/My-action
 
       #- name: ls
