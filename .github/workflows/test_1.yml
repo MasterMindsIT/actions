@@ -3,7 +3,7 @@ name: Hola Mundo
 on: [push]
 
 jobs:
-  hola:
+  holita:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +21,7 @@ jobs:
 
   otherjob:
     runs-on: ubuntu-latest
+    needs: [holita]
 
     steps:
     - name: LS
