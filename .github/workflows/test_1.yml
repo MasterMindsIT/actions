@@ -42,7 +42,10 @@ jobs:
         run: echo "MY_VAR vale $MY_VAR1"
       
       - name: Test1
-        run: echo "La variable declarada en github vars actiosn es ${{ vars.MY_SECRET_TEST_VAR }}"
+        run: echo "La variable declarada en github vars actiosn es ${{ vars.MY_VAR_ENVIROMENT }}"
+
+      - name: Test2
+        run: echo "La variable declarada en github vars actiosn es ${{ vars.MY_SECRET_VAR }}"
 
       
       #- name: Checkout code
