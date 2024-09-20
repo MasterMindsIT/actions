@@ -38,5 +38,8 @@ jobs:
     needs: [holita]
 
     steps:
+    #Sacado de github actions marketplace para obtener el workspace
+    - name: Checkout
+      uses: actions/checkout@v4.1.7       
     - name: LS
       run: ls -al
