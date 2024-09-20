@@ -1,0 +1,9 @@
+name: "My-action"
+description: "Test my actions"
+runs:
+#Nos permite agrupar pasos comunes a reutilizar
+  using: "composite"
+
+  steps:
+    - name: Hi world
+      run: echo "Hola mundo"

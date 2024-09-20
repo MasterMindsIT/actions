@@ -3,15 +3,16 @@ name: Hola Mundo
 
 #Indica que el evento push dispara los jobs
 #on: [push, pull_request]
+on: [push]
 
 #Se indica que ejecutaremos bajo eventos discriminados por rama o criterios elegibles push este caso
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - main
+#on:
+  #push:
+    #branches:
+      #- master
+  #pull_request:
+    #branches:
+      #- main
 jobs:
   #Nombre del job es holita
   holita:
@@ -23,22 +24,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: ls
-        run: ls -al
+      -name: ls action
+        uses: ./.github/actions/My-action
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4.0.4
+      #- name: ls
+        #run: ls -al
 
-      - name: node version
-        run: node --version
+      #- name: Setup Node.js environment
+        #uses: actions/setup-node@v4.0.4
 
-      - name: PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
+      #- name: node version
+        #run: node --version
 
-      - name: php version
-        run: php --version
+      #- name: PHP
+        #uses: shivammathur/setup-php@v2
+        #with:
+          #php-version: '8.3'
+
+      #- name: php version
+        #run: php --version
             
         #run: |
           #Damos permisos de ejecucion
